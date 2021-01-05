@@ -48,16 +48,19 @@ body {
 }
 
 .section {
-  margin-bottom: 75px;
+  // padding-bottom: 75px;
+  padding: 75px 0;
 }
 
 .title {
   font-size: 40px;
   line-height: 48px;
   @extend %os-semibold;
+  letter-spacing: 1px;
 }
 
 .text {
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: 1px;
 }
