@@ -14,7 +14,7 @@
   }
 
   &__local {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 21px;
     position: relative;
     cursor: pointer;
@@ -98,6 +98,13 @@
 .menu {
   background: #1B1E1F;
   padding: 20px 0;
+
+  &.fixed{
+    position: fixed;
+	    top: 0;
+      width: 100%;
+      z-index: 5;
+  }
 
   &__inner {
     display: flex;
