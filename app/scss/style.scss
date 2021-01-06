@@ -14,7 +14,7 @@
   }
 
   &__local {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
     position: relative;
     cursor: pointer;
@@ -95,15 +95,21 @@
   }
 }
 
+//Бургер меню
+.menu__btn {
+  display: none;
+}
+
+
 .menu {
   background: #1B1E1F;
   padding: 20px 0;
 
-  &.fixed{
+  &.fixed {
     position: fixed;
-	    top: 0;
-      width: 100%;
-      z-index: 5;
+    top: 0;
+    width: 100%;
+    z-index: 5;
   }
 
   &__inner {
@@ -130,7 +136,7 @@
   }
 
   &__item+.menu__item {
-    margin-left: 67px;
+    margin-right: 67px;
   }
 
   &__search {
@@ -139,6 +145,26 @@
     border: none;
     outline: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__item-link-phone {
+    display: none;
+  }
+
+  // &__btn-link--local {
+  //   display: none;
+  // }
+  // &__btn-link--btn {
+  //   display: none;
+  // }
+  // &__btn-link--email{
+  //   display: none;
+  // }
+  // &__btn-link-work {
+  //   display: none;
+  // }
+  &__burger {
+    display: none;
   }
 }
 
@@ -159,12 +185,13 @@
 
   &__slider-item {
     opacity: .8;
+  }
 
-    img {
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
+  &__img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
   }
 
   &__box {
@@ -210,6 +237,7 @@
     flex-wrap: wrap;
     // max-width: 960px;
     margin: 0 auto;
+    justify-content: center;
   }
 
   &__item {
@@ -320,6 +348,7 @@
   &__title {
     color: #FFFFFF;
     margin-bottom: 14px;
+    letter-spacing: 2px;
   }
 
   &__text {
@@ -368,7 +397,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    &::before{
+
+    &::before {
       content: url('../images/footer-line.png');
       position: absolute;
       top: -30px;
@@ -377,12 +407,13 @@
   }
 
   &__title {
-    font-size: 25px;
+    // font-size: 25px;
     font-style: italic;
     margin-bottom: 25px;
     letter-spacing: 1px;
   }
-  &__item + .footer__item{
+
+  &__item+.footer__item {
     margin: 10px 0;
   }
 
@@ -392,12 +423,13 @@
     font-size: 16px;
     letter-spacing: 1px;
     transition: all .3s;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
       color: #215E97;
     }
   }
-  
+
 
   &__item-link::before {
     content: "";

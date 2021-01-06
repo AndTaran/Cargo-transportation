@@ -14,35 +14,52 @@
       <div class="header__inner">
         <div class="header__local">г. Краснодар, ул. Домбайская д.63, офис 512</div>
         <div class="header__contact-top">
-          <div class="header__phone">8(9999) 22-88-88</div>
-          <div class="header__email">email@sitename.ru</div>
+          <div class="header__phone"><a href="tel:+79054759895">8(905) 475-98-95</a></div>
+          <div class="header__email"><a href="mailto:skorp93ru@yandex.ru">Skorp93ru@yandex.ru</a></div>
         </div>
         <div class="header__btn">Обратный звонок</div>
+        <button class="menu__btn">
+          <span class="menu__btn-line"></span>
+        </button>
       </div>
     </div>
     <nav class="menu">
       <div class="container">
         <div class="menu__inner">
           <ul class="menu__items">
-            <li class="menu__item">Главная</li>
-            <li class="menu__item">Компания</li>
-            <li class="menu__item">Услуги</li>
-            <li class="menu__item">Контакты</li>
+            <li class="menu__item phone"><a class="menu__item-link menu__item-link-phone"
+                href="tel:+79054759895">8(905)475-98-95</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Главная</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Компания</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Услуги</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Контакты</a></li>
           </ul>
           <input class="menu__search" type="search" value="" placeholder="Поиск по сайту ">
+          <!-- Меню бургер -->
+          <div class="menu__burger">
+            <div class="header__btn menu__btn-link--btn">Обратный звонок</div>
+            <div class="header__local menu__btn-link--local">г. Краснодар, ул. Домбайская д.63, офис 512</div>
+            <div class="header__email menu__btn-link--email"><a
+                href="mailto:skorp93ru@yandex.ru">Skorp93ru@yandex.ru</a></div>
+            <div class="menu__btn-link-work">
+              Режим работы:<br>с 9.00 - 21.00, без выходных
+            </div>
+          </div>
+
         </div>
       </div>
     </nav>
+    <div class="overlay"></div>
   </header>
 
   <section class="top">
     <div class="top__wrapper">
       <div class="top__slider">
         <div class="top__slider-item">
-          <img src="images/gazel.jpg" alt="">
+          <img class="top__img" src="images/gazel.jpg" alt="">
         </div>
         <div class="top__slider-item">
-          <img src="images/gazel2.jpg" alt="">
+          <img class="top__img" src="images/gazel2.jpg" alt="">
         </div>
       </div>
       <div class="container">
@@ -59,9 +76,10 @@
   <section class="section service">
     <div class="container">
       <div class="service__info">
-        <h3>комплекс логистических услуг</h3>
+        <h3 class="title-top">комплекс логистических услуг</h3>
         <h2 class="title">Основные направления компании</h2>
-        <div class="service__text text">Самые выгодные направления грузоперевозок международного/внутрироссийского сегментов,
+        <div class="service__text text">Самые выгодные направления грузоперевозок международного/внутрироссийского
+          сегментов,
           обслуживаемые нашей компанией, представлены ниже:</div>
       </div>
       <div class="service__items">
@@ -162,9 +180,10 @@
   <section class="section advantages">
     <div class="container">
       <div class="service__info">
-        <h3>Почему именно Мы? Решайте сами...</h3>
+        <h3 class="title-top">Почему именно Мы? Решайте сами...</h3>
         <h2 class="title">Преимущества</h2>
-        <div class="service__text text">Задача организации, в особенности же реализация намеченных плановых заданий требуют
+        <div class="service__text text">Задача организации, в особенности же реализация намеченных плановых заданий
+          требуют
           от нас анализа. Повседневная практика показывает, что консультация с широким активом позволяет выполнять
           важные задания.</div>
       </div>
@@ -218,15 +237,15 @@
           <h3 class="footer__title title">Контактные данные</h3>
           <ul class="footer__items">
             <li class="footer__item">
-              <a href="#" class="footer__item-link">г. Москва, ул. Пушкина, 59, офис 512</a>
+              <a href="#" class="footer__item-link">г. Краснодар, ул. Домбайская д.63, офис 512</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__item-link">8(9999) 22-88-88</a></li>
+              <a href="tel:+79054759895" class="footer__item-link">+7(905) 475-98-95</a></li>
             <li class="footer__item">
-              <a href="#" class="footer__item-link">Режим работы: с 9.00 - 21.00 без выходных</a>
+              <a href="#" class="footer__item-link">Режим работы: с 9.00 - 21.00, без выходных</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__item-link">email@sitename.ru</a>
+              <a href="mailto:skorp93ru@yandex.ru" class="footer__item-link">Skorp93ru@yandex.ru</a>
             </li>
         </div>
         <div class="footer__customer">
