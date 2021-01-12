@@ -9,15 +9,29 @@
 </head>
 
 <body>
+
+  <div class="form">
+    <form class="form__popup" action="php/sender.php" method="post">
+      <input type="text" class="name" name="name" placeholder="Имя*" required>
+      <input type="text" name="surname" placeholder="Фамилия">
+      <input type="text" class="phone" name="phone" placeholder="Телефон*" required>
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="text" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+      <button type="button" class="send-form">отправить</button>
+      <div class="status"></div>
+    </form>
+  </div>
+
   <header class="header">
     <div class="container">
+
       <div class="header__inner">
         <div class="header__local">г. Краснодар, ул. Домбайская д.63, офис 512</div>
         <div class="header__contact-top">
           <div class="header__phone"><a href="tel:+79054759895">8(905) 475-98-95</a></div>
           <div class="header__email"><a href="mailto:skorp93ru@yandex.ru">Skorp93ru@yandex.ru</a></div>
         </div>
-        <div class="header__btn">Обратный звонок</div>
+        <div id="btn" class="header__btn">Обратный звонок</div>
         <button class="menu__btn">
           <span class="menu__btn-line"></span>
         </button>
@@ -37,7 +51,7 @@
           <input class="menu__search" type="search" value="" placeholder="Поиск по сайту ">
           <!-- Меню бургер -->
           <div class="menu__burger">
-            <div class="header__btn menu__btn-link--btn">Обратный звонок</div>
+            <div id="btn" class="header__btn menu__btn-link--btn">Обратный звонок</div>
             <div class="header__local menu__btn-link--local">г. Краснодар, ул. Домбайская д.63, офис 512</div>
             <div class="header__email menu__btn-link--email"><a
                 href="mailto:skorp93ru@yandex.ru">Skorp93ru@yandex.ru</a></div>
@@ -225,7 +239,7 @@
           доступ на все три терминала НЛЭ, НМТП и НУТЭП. На каждом из терминалов есть собственные экспедиторы, которые в
           кротчайшие сроки организовывают и осуществляют все необходимые манипуляции с грузом.
         </div>
-        <button class="local__btn">Получить бесплатную консультацию</button>
+        <button id="btn" class="local__btn">Получить бесплатную консультацию</button>
       </div>
     </div>
   </section>

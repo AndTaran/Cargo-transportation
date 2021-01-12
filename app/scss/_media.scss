@@ -1,4 +1,13 @@
 @media (max-width: 1245px) {
+
+  .form form input {
+    height: 45px;
+  }
+
+  .form form textarea {
+    max-height: 180px;
+  }
+
   .header__inner {
     padding: 0 25px;
   }
@@ -24,6 +33,14 @@
 }
 
 @media (max-width: 1024px) {
+  .form {
+    z-index: 201;
+  }
+
+  .form__popup {
+    width: 300px;
+  }
+
   .header__inner {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -37,6 +54,12 @@
 }
 
 @media (max-width: 800px) {
+
+  .form__popup {
+    left: 30%;
+    width: 280px;
+  }
+
   .header__inner {
     justify-content: space-around;
   }
@@ -305,6 +328,15 @@
 }
 
 @media (max-width: 425px) {
+
+  .form__popup {
+    left: 16%;
+  }
+
+  .form form textarea {
+    max-height: 100px;
+  }
+
   .header__inner {
     justify-content: space-between;
     padding: 0 15px;
@@ -346,5 +378,11 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form__popup {
+    left: 6%;
   }
 }

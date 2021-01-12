@@ -1,4 +1,3 @@
-
 $(function () {
 
   $('.top__slider').slick({
@@ -21,9 +20,74 @@ $(function () {
     $('.menu').toggleClass("menu--active");
   });
 
-  // $('.menu__list-link').on('click', function () {
-  //   $('.menu__btn').removeClass('menu__btn--active');
-  //   $('.menu__list').removeClass('menu__list--active');
-  // });
+
+  let btn = document.querySelectorAll('#btn');
+  let form = document.querySelector('.form');
+  let popup = document.querySelector('.form__popup');
+  let body = document.querySelector('body');
+
+  for (let index = 0; index < btn.length; index++) {
+    const el = btn[index];
+    el.addEventListener('click', () => {
+      form.classList.toggle('open');
+      body.style.overflow = 'hidden';
+      body.style.paddingRight = '17px';
+    })
+  }
+
+  $(form).on('click', function (e) {
+    if (!$(e.target).closest(popup).length) {
+      $(form).removeClass('open');
+      body.style.overflow = 'visible';
+      body.style.paddingRight = '0px';
+    }
+    e.stopPropagation();
+  });
+
+
+
+  $('.send-form').click(function () {
+    let form = $(this).closest('form');
+
+    if (form.valid()) {
+      // form.css('opacity', '.5');
+      var actUrl = form.attr('action');
+
+      $.ajax({
+        url: actUrl,
+        type: 'post',
+        dataType: 'html',
+        data: form.serialize(),
+        success: function (data) {
+          form.html(data);
+          form.css('opacity', '1');
+          form.find('.status').html('форма отправлена успешно');
+          //$('#myModal').modal('show') // для бутстрапа
+        },
+        error: function () {
+          form.find('.status').html('серверная ошибка');
+        }
+      });
+    }
+  });
+
+
+  // Курсор всегда в начале поля phone
+  $.fn.setCursorPosition = function (pos) {
+    if ($(this).get(0).setSelectionRange) {
+      $(this).get(0).setSelectionRange(pos, pos);
+    } else if ($(this).get(0).createTextRange) {
+      var range = $(this).get(0).createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+
+  $(".phone").click(function () {
+    $(this).setCursorPosition(3);
+  }).mask("+7(999) 999-99-99");
+
 
 })
